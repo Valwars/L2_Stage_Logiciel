@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <SplitPane prefHeight="33.0" prefWidth="919.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="settingsButton" layoutX="14.0" layoutY="3.0" mnemonicParsing="false" text="Réglages" />
+                  <Button fx:id="selectFileButton" layoutX="100.0" layoutY="2.0" mnemonicParsing="false" text="Sélectionner un fichier" />
+                  <Label fx:id="selectedFileLabel" layoutX="251.0" layoutY="7.0" text="Aucun Fichier sélectionné " />
+                  <Button fx:id="genererImg" layoutX="793.0" layoutY="1.0" mnemonicParsing="false" text="Générer image" />
+                  <Button fx:id="ecran" layoutX="612.0" layoutY="1.0" mnemonicParsing="false" onAction="#agrandir" prefHeight="25.0" prefWidth="119.0" text="Agrandir le graphe" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="499.0" prefWidth="783.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="tracer" layoutX="74.0" layoutY="458.0" mnemonicParsing="false" onAction="#Test" text="Tracer" />
+            <TextField fx:id="tx2" layoutX="98.0" layoutY="155.0" prefHeight="26.0" prefWidth="36.0" text="50" />
+            <Label layoutX="12.0" layoutY="206.0" text="Coordonnées y :" textFill="#f57c0b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ty1" layoutX="98.0" layoutY="281.0" prefHeight="26.0" prefWidth="36.0" text="60" />
+            <Label layoutX="12.0" layoutY="406.0" text="Pas :" textFill="#ff7d04">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pas" layoutX="99.0" layoutY="402.0" prefHeight="26.0" prefWidth="36.0" text="3" />
+            <Label layoutX="15.0" layoutY="28.0" text="Coordonnées x :" textFill="#f28101">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="112.0" text="Début :" />
+            <TextField fx:id="tx1" layoutX="98.0" layoutY="108.0" prefHeight="26.0" prefWidth="36.0" text="50" />
+            <Label layoutX="14.0" layoutY="159.0" text="Fin :" />
+            <Label layoutX="14.0" layoutY="285.0" text="Début :" />
+            <Label layoutX="14.0" layoutY="332.0" text="Fin :" />
+            <TextField fx:id="ty2" layoutX="98.0" layoutY="328.0" prefHeight="26.0" prefWidth="36.0" text="60" />
+            <LineChart fx:id="linechart" layoutX="164.0" layoutY="35.0" prefHeight="481.0" prefWidth="701.0" title="Graphe">
+              <xAxis>
+                <CategoryAxis prefHeight="39.0" prefWidth="443.0" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Label layoutX="14.0" layoutY="62.0" text="Nom :" />
+            <TextField fx:id="nomx" layoutX="98.0" layoutY="58.0" prefHeight="26.0" prefWidth="36.0" text="x" />
+            <Label layoutX="14.0" layoutY="242.0" text="Nom :" />
+            <TextField fx:id="nomy" layoutX="99.0" layoutY="238.0" prefHeight="26.0" prefWidth="36.0" text="y" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
