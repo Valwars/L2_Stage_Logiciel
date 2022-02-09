@@ -2,3 +2,5 @@
  Logiciel Java dans le cadre d'un stage.
 
 Participants : Amaury AUDOUARD, Valentin MERAULT, Baptiste MERAULT.
+
+Interface graphique développé en JavaFX.
