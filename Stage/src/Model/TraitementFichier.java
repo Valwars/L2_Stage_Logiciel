@@ -50,21 +50,31 @@ public class TraitementFichier {
 	    
 	   
 	    BufferedReader br=new BufferedReader(fr);
+	    
+
 	
-	    for (String line7=Files.readAllLines(Paths.get(url)).get(6); br.readLine() != null; br.readLine()) {
-	    	System.out.println("Test je suis DANS la boucle");
-	    	String parts6[]=line7.split("    ");
-	    	String parts7[]=parts6[1].split("  ");
-	    	String E=parts7[0];
-	    	String f_up=parts7[1];
-	    	String f_down=parts7[2];
-	    	String g_up=parts7[3];
-	    	String g_down=parts7[4];
-	    	hm.put("E",E);
-	    	hm.put("f_up",f_up);
-	    	hm.put("f_down",f_down);
-	    	hm.put("g_up",g_up);
-	    	hm.put("g_down",g_down);
+	    for (int i = 0; br.readLine() != null;i++) {
+	    	
+	    	if(i >= 7) {
+	    		
+	    		String lineF = br.readLine();
+
+		    	System.out.println(lineF);
+		    	System.out.println("Test je suis DANS la boucle");
+		    	String parts6[]=lineF.split("    ");
+		    	String parts7[]=parts6[1].split("  ");
+		    	String E=parts7[0];
+		    	String f_up=parts7[1];
+		    	String f_down=parts7[2];
+		    	String g_up=parts7[3];
+		    	String g_down=parts7[4];
+		    	hm.put("E",E);
+		    	hm.put("f_up",f_up);
+		    	hm.put("f_down",f_down);
+		    	hm.put("g_up",g_up);
+		    	hm.put("g_down",g_down);
+	    	}
+	    	
 	    }
 	    
 	    hm.put("nombre d'ions",nbre_ions);
