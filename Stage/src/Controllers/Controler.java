@@ -174,6 +174,13 @@ public class Controler {
 			selectedFileLabel.setText(file.getAbsolutePath());
 			selectFileButton.setText("Fichier selectionné : ");
 			
+			try {
+				traitement = new TraitementFichier(file.getAbsolutePath());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		}
 	}
 

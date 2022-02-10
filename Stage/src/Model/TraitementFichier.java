@@ -47,8 +47,12 @@ public class TraitementFichier {
 	    String Efermi=parts4[3];
 	    
 	    FileReader fr=new FileReader(url);
+	    
+	   
 	    BufferedReader br=new BufferedReader(fr);
-	    for (String line7=Files.readAllLines(Paths.get(url)).get(6); line!=null; br.readLine()) {
+	
+	    for (String line7=Files.readAllLines(Paths.get(url)).get(6); br.readLine() != null; br.readLine()) {
+	    	System.out.println("Test je suis DANS la boucle");
 	    	String parts6[]=line7.split("    ");
 	    	String parts7[]=parts6[1].split("  ");
 	    	String E=parts7[0];
