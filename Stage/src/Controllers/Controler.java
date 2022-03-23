@@ -121,6 +121,7 @@ public class Controler {
 			public void handle(ActionEvent e) {
 
 				Stage stage = new Stage();
+				
 				FXMLLoader loader = new FXMLLoader(getClass().getResource("../View/settings.fxml"));
 
 				SettingsController controller = new SettingsController(user);
